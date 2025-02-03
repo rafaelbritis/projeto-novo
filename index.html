@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Canais Favoritos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="https://lh3.googleusercontent.com/3zkP2SYe7yYoKKe47bsNe44yTgb4Ukh__rBbwXwgkjNRe4PykGG409ozBxzxkrubV7zHKjfxq6y9ShogWtMBMPyB3jiNps91LoNH8A=s500" alt="YouTube Logo" class="youtube-logo">
+        <h1>Meus Canais do YouTube</h1>
+    </header>
+    <main>
+        <form id="channelForm">
+            <label for="channelName">Nome do Canal:</label>
+            <input type="text" id="channelName" required placeholder="Digite o nome do canal para buscar">
+            <div id="searchResults" class="search-results"></div>
+
+            <label for="channelURL">URL do Canal:</label>
+            <input type="url" id="channelURL" required value="https://www.youtube.com/channel/" readonly>
+
+            <button type="submit">Adicionar</button>
+        </form>
+        <div class="buttons-container">
+            <button onclick="sortChannelsByName()">Ordenar por Nome</button>
+            <button onclick="sortChannelsByRecent()">Ordenar por Vídeos Recentes</button>
+        </div>
+        <ul id="channelList"></ul>
+    </main>
+    <footer id="footer">
+        <p>Desenvolvido Por Rafael de Brito</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
